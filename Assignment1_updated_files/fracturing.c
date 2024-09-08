@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <math.h>   // for math calculations
+#define PI 3.14159  //defines the constant to use when calculating area
 
 
 double calculateDistance() {
@@ -26,21 +27,54 @@ double calculateDistance() {
     return distance;
 }
 
+// function to calculate width
+double calculateWidth() {
+    width = calculateDistance(y1, y2); // finds the width
+    printf("The width of the city encompassed by your request %.2f\n", width);
+    return width
+}
+
+// function to calculate perimeter
 double calculatePerimeter() {
     
     double distance, perimeter, difficulty;
-    distance = calculateDistance();  // calculates distance by calling the distance function
-    perimeter = 3.14159 * distance;  // calculates perimeter
-    printf("The perimeter of the city is %.2f\n", perimeter);
-    printf("On a scale 1.0 to 5.0, how difficult was this function for you? \n");
-    scanf("%lf", &difficulty);
 
+    length = calculateDistance(x1, x1);  // find the height
+    perimeter = length * width ;  // calculates perimeter
+
+    printf("Point #1 entered: x1 = %.2f; y1 = %.2f \n", x1, y1);
+    printf("Point #2 entered: x2 = %.2f; y2 = %.2f\n", x2, y2);
+    printf("The perimeter of the city is %.2f\n", perimeter);
+
+    // returns the variable for difficulty
     return difficulty;
 }
 
+
+// function to calculate area
+double calculateArea() {
+    radius = calculateDistance()/2;   // finds the radius
+    area = PI * pow(radius, 2);       // calls the variable PI to calculate area
+    
+    // returns the variable storing information for difficulty
+    return difficulty;
+}
+
+double calculateDifficulty() {
+
+    // asks the user for difficulty and saves the data into the variable
+    printf("On a scale 1.0 to 5.0, how difficult was this function for you? \n");
+    scanf("%lf", &difficulty);
+
+    return difficulty
+}
+
 int main(int argc, char**aargv) {
+    // calls the functions defined above
     calculateDistance();
     calculatePerimeter();
+    calculateArea();
+    calculateDifficulty();
     return 0;
 }
  
