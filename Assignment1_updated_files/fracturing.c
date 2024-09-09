@@ -30,14 +30,17 @@ double calculateDistance() {
 // function to calculate perimeter
 double calculatePerimeter() {
     
-    double distnace = calculateDistance();
+    double distance = calculateDistance();
     double radius = distance / 2; // finds the radius
     double perimeter = 2 * PI * radius  ;  // calculates perimeter
+    double difficulty;  // For difficulty rating (idea from ChatGPT)
 
     printf("The perimeter of the city is %.2f\n", perimeter);
 
-    // returns the variable for difficulty
-    return perimeter;
+    // returns the value for difficulty
+    printf("On a scale 1.0 to 5.0, how difficult was this function for you? \n");
+    scanf("%lf", &difficulty); 
+    return difficulty;
 }
 
 // function to calculate area
@@ -46,9 +49,12 @@ double calculateArea() {
     double distance = calculateDistance();
     double radius = radius = distance / 2; // finds the radius
     double area = PI * pow(radius, 2); // calls the variable PI to calculate area
+    double difficulty;
+    printf("The area of the city is %.2f\n", area);
 
-    printf("The area of the city is %.2f\n", area)
-    // returns the variable storing information for difficulty
+
+    printf("On a scale 1.0 to 5.0, how difficult was this function for you? \n");
+    scanf("%lf", &difficulty);
     return difficulty;
 }
 
@@ -57,6 +63,10 @@ double calculateWidth() {
 
     double width = calculateDistance(x1, x2);
     printf("The width of the city encompassed by your request is %.2f\n", width);
+
+    double difficulty;
+    printf("On a scale 1.0 to 5.0, how difficult was this function for you? \n");
+    scanf("%lf", &difficulty);
     return difficulty
 }
 
@@ -64,18 +74,12 @@ double calculateWidth() {
 double calculateHeight() {
 
     double height = calculateDistance(y1, y2);
-    printf("The height of the city encompassed by your request is %.2f\n", height);
-    return difficulty
-}
-
-// function to ask the user for difficulty
-double calculateDifficulty() {
-
-    // asks the user for difficulty and saves the data into the variable
     double difficulty;
+    printf("The height of the city encompassed by your request is %.2f\n", height);
+
     printf("On a scale 1.0 to 5.0, how difficult was this function for you? \n");
     scanf("%lf", &difficulty);
-    return difficulty
+    return difficulty;
 }
 
 int main(int argc, char**aargv) {
