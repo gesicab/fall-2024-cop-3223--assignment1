@@ -2,21 +2,27 @@
 #include <math.h>   // for math calculations
 #define PI 3.14159  //defines the constant for pi
 
+// helper function to avoid repeation in print statements
+double calculateusedDistance() {
+    double x1, y1, x2, y2;
+    double distanceuse = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
+    return distanceuse;
+}
+
 // function to calculate distance
 double calculateDistance() {
-
     double x1, y1, x2, y2, distance;    // declares the variables for coordinates
 
     // asks the user for the first coordinates
-    printf("Enter coordinates for point 1: ");
-    scanf("%lf %lf", &x1, &y2); //saves the data into the variables
+    printf("Enter coordinates for point 1 (x1 y1): \n");
+    scanf("%lf %lf", &x1, &y1); //saves the data into the variables
 
     // asks the user for the first coordinates 
-    printf("Enter coordinates for point 2: ");
-    scanf("%lf %lf", &x1, &y2); //saves the data into the variables
+    printf("Enter coordinates for point 2 (x2 y2): \n");
+    scanf("%lf %lf", &x2, &y2); //saves the data into the variables
 
     // calculates distance
-    distance = sqrt(pow(x2 - x1, 2) + pow(y2 - y2, 2));
+    distance = calculateusedDistance(x1, x2, y1, y2);   // (idea from chatGPT)
 
     // displays the points and calculated distance to the user
     printf("Point #1 entered: x1 = %.2f; y1 = %.2f\n", x1, y1);
