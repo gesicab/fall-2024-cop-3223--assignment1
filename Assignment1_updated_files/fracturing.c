@@ -1,9 +1,10 @@
 // Gesica Borecki
 // UCFID: 5487663
+// all my ideas unless otherwise specified
 
 #include <stdio.h>
 #include <math.h>   // for math calculations
-#define PI 3.14159  //defines the constant for pi
+#define PI 3.14159  // defines the constant for pi (help from stackoverflow)
 
 // helper function to calculate distance seperate from printing it (idea from chatGPT)
 double calculateusedDistance(double x1, double y1, double x2, double y2) {
@@ -123,8 +124,7 @@ double calculateHeight() {
 }
 
 // calls the functions so they can be executed
-int main(int argc, char**aargv) {
-    // calls the functions defined above
+int main(int argc, char**argv) {
     calculateDistance();
     calculatePerimeter();
     calculateArea();
@@ -132,4 +132,3 @@ int main(int argc, char**aargv) {
     calculateHeight();
     return 0;
 }
- 
