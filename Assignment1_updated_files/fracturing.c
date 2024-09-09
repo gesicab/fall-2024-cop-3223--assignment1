@@ -21,7 +21,8 @@ double calculateDistance() {
     scanf("%lf %lf", &x2, &y2);
 
     // calculates distance by calling the helper function
-    distance = calculateusedDistance(x1, y1, x2, y2);   // (idea from chatGPT)
+    // (idea from chatGPT) need to pass through meaningful variables
+    distance = calculateusedDistance(x1, y1, x2, y2); 
 
     // displays the points and calculated distance to the user
     printf("Point #1 entered: x1 = %.2f; y1 = %.2f\n", x1, y1);
@@ -35,7 +36,6 @@ double calculateDistance() {
 // function to calculate perimeter
 double calculatePerimeter() {
     double x1, y1, x2, y2;  // initializing variables
-
 
     // asks the user for coordinates
     printf("Enter coordinates for point 1 (x1 y1): \n");
