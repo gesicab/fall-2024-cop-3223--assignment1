@@ -17,9 +17,9 @@ double calculateDistance() {
 
     // asks the user for coordinates
     printf("Enter coordinates for point 1 (x1 y1): \n");
-    scanf("%lf %lf", &x1, &y1);
+    scanf("%lf %lf", &x1, &y1);     // saves the data into variables
     printf("Enter coordinates for point 2 (x2 y2): \n");
-    scanf("%lf %lf", &x2, &y2);
+    scanf("%lf %lf", &x2, &y2);     // saves the data into variables
 
     // calculates distance by calling the helper function
     // (idea from chatGPT) need to pass through meaningful variables
@@ -40,9 +40,9 @@ double calculatePerimeter() {
 
     // asks the user for coordinates
     printf("Enter coordinates for point 1 (x1 y1): \n");
-    scanf("%lf %lf", &x1, &y1);
+    scanf("%lf %lf", &x1, &y1);     // saves the data into variables
     printf("Enter coordinates for point 2 (x2 y2): \n");
-    scanf("%lf %lf", &x2, &y2);
+    scanf("%lf %lf", &x2, &y2);     // saves the data into variables
 
     // calculates distance (diameter)
     double distance = calculateusedDistance(x1, y1, x2, y2); // finds the diameter through the distance function
