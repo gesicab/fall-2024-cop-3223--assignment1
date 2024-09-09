@@ -2,10 +2,10 @@
 #include <math.h>   // for math calculations
 #define PI 3.14159  //defines the constant for pi
 
-
+// function to calculate distance
 double calculateDistance() {
 
-    double x1, y1, x2, y2, distance, radius;    // declares the variables for coordinates
+    double x1, y1, x2, y2, distance;    // declares the variables for coordinates
 
     // asks the user for the first coordinates
     printf("Enter coordinates for point 1: ");
@@ -27,56 +27,60 @@ double calculateDistance() {
     return distance;
 }
 
-// function to calculate perimeter
+// function to calculate perimeter and difficulty
 double calculatePerimeter() {
     
-    double distance = calculateDistance();
-    double radius = distance / 2; // finds the radius
+    double distance = calculateDistance(); // finds the diameter through the distance function
+    double radius = distance / 2; // calculates the radius
     double perimeter = 2 * PI * radius  ;  // calculates perimeter
     double difficulty;  // For difficulty rating (idea from ChatGPT)
 
+    // displays the output for perimeter and asks for difficulty
     printf("The perimeter of the city is %.2f\n", perimeter);
-
-    // returns the value for difficulty
     printf("On a scale 1.0 to 5.0, how difficult was this function for you? \n");
-    scanf("%lf", &difficulty); 
+    scanf("%lf", &difficulty);
+
     return difficulty;
 }
 
-// function to calculate area
+// function to calculate area and difficulty
 double calculateArea() {
 
-    double distance = calculateDistance();
-    double radius = radius = distance / 2; // finds the radius
+    double distance = calculateDistance(); // finds the diameter (distance)
+    double radius = radius = distance / 2; // calculates the radius
     double area = PI * pow(radius, 2); // calls the variable PI to calculate area
     double difficulty;
+
+    // displays the output for area and asks for difficulty
     printf("The area of the city is %.2f\n", area);
-
-
     printf("On a scale 1.0 to 5.0, how difficult was this function for you? \n");
     scanf("%lf", &difficulty);
+
     return difficulty;
 }
 
-// function to calculate width
+// function to calculate width and difficulty
 double calculateWidth() {
 
-    double width = calculateDistance(x1, x2);
-    printf("The width of the city encompassed by your request is %.2f\n", width);
-
+    double width = calculateDistance();
     double difficulty;
+
+    // displays the width and asks for difficulty
+    printf("The width of the city encompassed by your request is %.2f\n", width);
     printf("On a scale 1.0 to 5.0, how difficult was this function for you? \n");
     scanf("%lf", &difficulty);
-    return difficulty
+
+    return difficulty;
 }
 
-// function to calculate height
+// function to calculate height and difficulty
 double calculateHeight() {
 
-    double height = calculateDistance(y1, y2);
+    double height = calculateDistance();
     double difficulty;
-    printf("The height of the city encompassed by your request is %.2f\n", height);
 
+    // displays the height and asks for difficulty
+    printf("The height of the city encompassed by your request is %.2f\n", height);
     printf("On a scale 1.0 to 5.0, how difficult was this function for you? \n");
     scanf("%lf", &difficulty);
     return difficulty;
