@@ -93,7 +93,6 @@ int main(int argc, char**aargv) {
     calculateArea();
     calculateWidth();
     calculateHeight();
-    calculateDifficulty();
     return 0;
 }
  
